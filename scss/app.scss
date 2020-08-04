@@ -1,0 +1,222 @@
+@import 'variables';
+@import 'mixins';
+
+html{
+@include box-sizing(border-box);
+}
+*,
+*:after,
+*:before{
+    @include box-sizing(inherit);
+}
+ 
+body{
+    background-color: $black-color;
+    font-family: $montserrat;
+    color: $gray-2;
+    @include tablet{
+        background-color: unset;
+        background-image: url(../img/banner.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top center; 
+
+    }
+}
+a{
+    color: $gray-3;
+    text-decoration: none;
+    &:hover{
+      text-decoration: underline;
+    }
+}
+.contenedor{
+    width: 90%;
+    margin: 0 auto;
+}
+.site-header{
+    .logo{
+        margin-top: .8rem;
+        margin-left: .8rem;
+        max-width: 180px;
+        width: 165px;
+        height: 45px;
+        @include tablet(){
+            margin-top: 1.8%;
+            margin-left: 2.9%;
+        }
+    }
+}
+.formulario-login{
+    @include tablet(){
+        background-color: rgba(0, 0, 0, 0.85);
+        max-width: 450px;
+        padding: 4rem 4rem 4rem 4rem;
+        margin: 1rem auto 4rem auto;
+        border-radius: $radius;
+    }
+}
+form{
+    legend{
+        color:$white-color;
+        font-size: 2rem;
+        font-weight: bold;
+        margin-bottom: 1.5rem;
+      
+        @include phone{
+            margin-top: 2rem;
+        }
+        @include tablet{
+            margin-top: 0rem;
+        }
+    }
+   
+        .campo{
+           display: flex; 
+           position: relative;
+           margin-bottom: 1rem;
+          
+           label{
+               position: absolute;
+               top: 1rem;
+               left: 1.4rem;
+               font-size: 1rem;
+               transition: .2s ease, top .2s ease;
+
+           }
+           input{
+               flex: 1;
+               padding: 1.3rem 1rem .7rem 1.4rem;
+               border: none;
+               background-color: $gray;
+               border-radius: $radius;
+               color: $white-color;
+              
+               &:focus{
+                   background-color: $gray-3;
+                   outline: none;
+
+                   
+               }
+           }
+           .label{
+            font-size: .6rem;
+            top: .5rem;
+        }
+      }
+      .submit{
+          display: flex;
+          margin-top: 2.5rem;
+          input[type="submit"]{
+              @include boton($primary);
+          }
+      }
+      .acciones{
+          display: flex;
+          justify-content: space-between;
+          padding: .5rem 0;
+          margin-top: .5rem;
+          margin-bottom: 3rem;
+         /*  margin: .5rem 0rem 6rem 0rem; */
+          label, a{
+              font-size: .8rem;
+              text-decoration: none;
+              color: $gray-2;
+          }
+      }
+   
+}
+
+.contenido-inferior{
+    margin: 0rem 0rem 6rem 0rem;
+    .log-face{
+        color: $gray-2;
+        &:hover{
+            text-decoration: none;
+        }
+    }
+    .fa-facebook{
+        color: rgb(255, 255, 255);
+    }
+    .nuevo-usuario{
+        color: $gray-2;
+        display: block;
+        margin-top: 1rem;
+        span{
+            color: $white-color;
+        }
+    }
+    p{
+        font-size: .8rem;
+        span{
+            color: rgb(52, 114, 248);
+            font-size: .9rem;
+            &:hover{
+                text-decoration: underline;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.site-footer{
+    border-top: 1px solid $gray-2;
+    padding: 1rem 0 4rem 0;
+    @include tablet{
+        border-top: unset;
+        background-color: rgba(18, 18, 18, 0.85);
+        padding: 1rem 0 3rem 0;
+
+    }
+    .contenedor{
+        max-width: 100%;
+        
+        @include desktop{
+            max-width: 72%;
+        }
+        @include desktopxl{
+            max-width: 50%;
+        }
+        .menu-footer{
+            width: 90%;
+            margin-bottom: 2.5rem;
+            a{
+                color: $gray-2;
+                font-size: .8rem;
+                margin-right: 2rem;
+            }
+        }
+        
+    }
+    select{
+       text-align-last: right;
+       font-size: .9rem;
+       background-color: transparent;
+       border: 1px solid rgba(63, 63, 63, 0.85);
+       color: $white-color;
+       padding: .8rem 2rem .8rem 2rem;
+       border-radius: $radius;
+       background-image: url(../img/world.png);
+       background-repeat: no-repeat;
+       background-position: left;
+       background-size: auto;
+       background-position: .4rem;
+       
+       &:focus{
+           outline: none;
+       }
+       option{
+           background-color: rgba(0, 0, 0, 0.85);
+           font-size: .8rem;
+           height: 2rem;
+       }
+    }
+    
+}
+
+
+/* Error user and password */
+#errorUser, #errorPass{
+    font-size: .8rem;
+    color: rgb(201, 102, 21);
+}

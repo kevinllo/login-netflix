@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>DevFLix</title>
+    <link
+      rel="stylesheet"
+      href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+      integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/app.css" />
+  </head>
+  <body id="body">
+    <header class="site-header">
+      <img src="./img/Logo_Netflix.png" alt="logo" class="logo" />
+    </header>
+    <main class="formulario-login contenedor">
+      <form action="#" id="form" method="get">
+        <legend>Sign In</legend>
+        <div class="campo">
+          <input type="email" id="user" />
+          <label id="label-1" class=""> Email o número de teléfono</label>
+        </div>
+        <span id="errorUser">
+         
+        </span>
+        <div class="campo">
+          <input type="password" id="password" />
+          <label id="label-2" class=""> Contraseña</label>
+        </div>
+        <span id="errorPass">
+            
+        </span>
+        <div class="submit">
+          <input type="submit" value="Sing In" />
+        </div>
+        <div class="acciones">
+          <div class="recuerdame">
+            <input type="checkbox" id = "checked" checked>
+            <label>Remember me</label>
+          </div>
+          <div class="ayuda">
+            <a href="#">¿Necesitas ayuda?</a>
+          </div>
+        </div>
+      </form>
+
+      <div class="contenido-inferior">
+        <a href="#" class="log-face"
+          ><i class="fab fa-facebook"></i> Login with Facebook</a
+        >
+        <a href="#" class="nuevo-usuario">
+          ¿New to Netflix? <span>Sing up now</span>
+        </a>
+        <p>
+          This page is protected by Google reCAPTCHA to ensure you're not a bot.
+          <span>Learn more</span>
+        </p>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="contenedor">
+        <p>¿Preguntas? Llama al 01800-265-0161</p>
+        <nav class="menu-footer">
+          <a href="#">Términos de las tarjetas de regalo</a>
+          <a href="#">Términos de uso</a>
+          <a href="#">Declaración de privacidad</a>
+        </nav>
+        <select class="language">
+          <option value="en">English</option>
+          <option value="es">Spanish</option>
+        </select>
+      </div>
+    </footer>
+    <script src="./js/scripts.js"></script>
+  </body>
+</html>
